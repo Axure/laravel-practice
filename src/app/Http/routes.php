@@ -14,6 +14,16 @@
 //Route::get('/', 'WelcomeController@index');
 Route::get('/', 'IndexController@index');
 
+//Route::get('/user/{id}', function($id) {
+////    return view('user.profile', ['user' => User::findOrFail($id)]);
+//
+//});
+
+Route::get('user/{id}', 'UserController@showProfile');
+Route::get('user', 'UserController@showAllProfile');
+
+//Route::post(/)
+
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
